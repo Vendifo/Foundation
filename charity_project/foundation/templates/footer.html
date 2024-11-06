@@ -1,0 +1,69 @@
+{% load static %}
+<footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:justify-between">
+            <!-- Логотип фонда -->
+            <div class="mb-6 md:mb-0">
+                <img src="{% static 'img/logo.png' %}" alt="Логотип фонда" class="h-16">
+            </div>
+            <!-- Краткое описание миссии -->
+            <div class="mb-6 md:mb-0">
+                <h3 class="text-xl font-semibold">Наша Миссия</h3>
+                <p class="mt-2 text-gray-300">
+                    Мы оказываем финансовую, психологическую и юридическую поддержку участникам СВО и их семьям.
+                </p>
+            </div>
+
+            <!-- Социальные сети -->
+            <div class="mb-6 md:mb-0">
+                <h3 class="text-xl font-semibold">Социальные Сети</h3>
+                <div class="flex space-x-4 mt-2">
+                    <a href="https://facebook.com" target="_blank" class="hover:text-red-600">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="hover:text-red-600">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="hover:text-red-600">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://vk.com" target="_blank" class="hover:text-red-600">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Контактная информация и полезные ссылки -->
+        <div class="mt-8 flex flex-col md:flex-row md:justify-between w-full">
+            <div class="md:flex md:space-x-6 w-full">
+                <div class="flex-1">
+                    <h3 class="text-xl font-semibold">Полезные ссылки</h3>
+                    <ul class="mt-2 text-gray-300 space-y-1">
+                        <li><a href="{% url 'index' %}" class="hover:text-white">Главная</a></li>
+                        <li><a href="{% url 'donation' %}" class="hover:text-white">Пожертвование</a></li>
+                        <li><a href="{% url 'initiative' %}" class="hover:text-white">Инициативные группы</a></li>
+                        <li><a href="{% url 'contact' %}" class="hover:text-white">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-xl font-semibold">Контактная Информация</h3>
+                    <p class="mt-2 text-gray-300">Фирменное наименование: Благотворительный Фонд «Сила в Единстве
+                        отряд Гуран»</p>
+                    <p class="mt-1 text-gray-300">Телефон: <a href="tel:+89144406544"
+                            class="text-blue-400">8-914-440-65-44</a></p>
+                    <p class="mt-1 text-gray-300">Электронная почта: <a href="mailto:guran75zk@bk.ru"
+                            class="text-blue-400">guran75zk@bk.ru</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Политика конфиденциальности и условия использования -->
+        <div class="mt-8 border-t border-gray-700 pt-4 text-center">
+            <a href="{% url 'privacy_policy' %}" class="text-gray-300 hover:text-white mx-2">Политика конфиденциальности</a>
+            <span class="text-gray-300">|</span>
+            <a href="{% url 'terms_of_use' %}" class="text-gray-300 hover:text-white mx-2">Условия использования</a>
+        </div>
+        
+    </div>
+</footer>

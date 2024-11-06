@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Контакты{% endblock %}
+
+{% block content %}
+
+
+<header class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-6">
+        <h1 class="text-3xl font-bold">Контактная Информация</h1>
+    </div>
+</header>
+
+<main class="container mx-auto px-6 py-8">
+    <button onclick="goBack()" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded mb-6">
+        ← Назад
+    </button>
+    <h2 class="text-2xl font-semibold mb-4">Связаться с нами</h2>
+    <p class="mb-4">Мы всегда рады вашим вопросам и предложениям. Пожалуйста, заполните форму ниже или свяжитесь с
+        нами по указанным контактам.</p>
+
+    <div class="flex flex-col md:flex-row md:space-x-6">
+        <!-- Контактные данные -->
+        <div class="flex-1 mb-6">
+            <h3 class="text-xl font-semibold">Наши Контакты</h3>
+
+            <p class="mt-1 text-gray-700">Адрес: г. Чита, Забайкальский край, ул. Фрунзе, д. 10</p>
+
+
+            <p class="mt-1 text-gray-700"><strong>Исполнительный директор:</strong> Рабданова Екатерина Васильевна
+            </p>
+
+
+            <h4 class="text-lg font-semibold mt-6">Учредители</h4>
+            <p class="mt-2 text-gray-700">Глебова Анна Александровна: <a href="tel:+89963148552"
+                    class="text-blue-500">8-996-314-85-52</a></p>
+            <p class="mt-1 text-gray-700">Винс Анна Сергеевна: <a href="tel:+89963124151"
+                    class="text-blue-500">8-996-312-41-51</a></p>
+
+
+            <h4 class="text-lg font-semibold mt-6">Контактные телефоны</h4>
+            <p class="mt-2 text-gray-700"><a href="tel:+89144406544" class="text-blue-500">8-914-440-65-44</a></p>
+
+            <h4 class="text-lg font-semibold mt-6">Адрес электронной почты</h4>
+            <p class="mt-2 text-gray-700"><a href="mailto:guran75zk@bk.ru" class="text-blue-500">guran75zk@bk.ru</a>
+            </p>
+        </div>
+
+
+        <!-- Форма обратной связи -->
+        <div class="flex-1 mb-6">
+            <h3 class="text-xl font-semibold">Обратная связь</h3>
+            <form action="#" method="POST" class="mt-4">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700">Ваше имя</label>
+                    <input type="text" id="name" name="name" required
+                        class="border border-gray-300 rounded w-full px-4 py-2">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700">Ваш Email</label>
+                    <input type="email" id="email" name="email" required
+                        class="border border-gray-300 rounded w-full px-4 py-2">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700">Сообщение</label>
+                    <textarea id="message" name="message" rows="4" required
+                        class="border border-gray-300 rounded w-full px-4 py-2"></textarea>
+                </div>
+                <button type="submit"
+                    class="bg-gray-800 text-white hover:bg-gray-700 font-bold py-2 px-4 rounded">Отправить</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+{% endblock %}

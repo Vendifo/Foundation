@@ -1,0 +1,370 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Главная - Благотворительный фонд «Сила в единстве отряд Гуран»{% endblock %}
+
+{% block content %}
+<section class="relative w-full h-screen bg-cover bg-center"
+    style="background-image: url('{% static 'img/1781636590_0_79_3072_1807_1920x1080_80_0_0_198678bab3368d1639b0b8831d2ada57.jpg' %}');">
+
+    <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-75"></div>
+
+    <!-- Логотип в левом верхнем углу -->
+    <div class="absolute top-4 left-4 z-20">
+        <img src="{% static 'img/logo.png' %}" alt="Логотип фонда" class="w-32 h-auto logoIMG">
+    </div>
+
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
+        <div class="max-w-4xl px-4 fade-in">
+
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight mt-4 mb-6 text-center">
+                Благотворительный фонд «Сила в единстве отряд Гуран»
+            </h1>
+
+            <p class="mt-4 text-xl md:text-2xl font-light max-w-2xl mx-auto leading-relaxed">
+                Финансовая, психологическая юридическая и гуманитарную помощь участникам СВО и их семьям.
+            </p>
+
+            <div class="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 flex-wrap">
+                <a href="{% url 'donation' %}" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full transition transform hover:scale-105 w-full sm:w-auto">
+                    Сделать пожертвование
+                </a>
+                <a href="{% url 'initiative' %}" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-bold py-3 px-6 rounded-full transition transform hover:scale-105 w-full sm:w-auto">
+                    Инициативная группа
+                </a>
+                <a href="{% url 'contact' %}" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-bold py-3 px-6 rounded-full transition transform hover:scale-105 w-full sm:w-auto">
+                    Контакты
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+ <!-- О нас -->
+ <section id="about" class="py-16 bg-gray-200">
+    <div class="container mx-auto px-6">
+
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800">О Фонде</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                Благотворительный фонд «Сила в Единстве Отряд ГУРАН» оказывает помощь гражданам, находящимся и пострадавшим в условиях Специальной Военной Операции. Мы объединяем усилия тех, кто хочет помочь людям в трудной ситуации, и организуем акции для сбора средств.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-12">
+
+            <!-- Без контейнера -->
+            <div class="bg-white p-8 rounded-lg shadow-lg w-full">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Цели и Миссия Фонда</h3>
+                <p class="text-gray-600 mb-4">
+                    Наша цель — создать сообщество поддержки, где каждый может внести свой вклад. Присоединяйтесь к нам, чтобы вместе помочь нуждающимся. Узнайте больше о наших инициативах и как вы можете поучаствовать на нашем сайте.
+                </p>
+                <p class="text-gray-600">
+                    Мы оказываем помощь участникам Специальной Военной Операции, их семьям, а также мобилизованным гражданам и добровольцам. Наша миссия — финансовая, психологическая и юридическая поддержка для улучшения их благосостояния и морального духа.
+                </p>
+                <p class="text-gray-600">
+                    Мы стремимся создать условия для оказания помощи нуждающимся и содействовать их социальной защите и реабилитации.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Как помочь -->
+<section id="how-to-help" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <!-- Заголовок секции -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800">Как помочь</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                Вы можете помочь фонду различными способами. Вот несколько вариантов участия.
+            </p>
+        </div>
+
+        <!-- Варианты помощи -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <!-- Пожертвование -->
+            <div
+                class="bg-white rounded-lg shadow-lg p-6 text-center transition transform hover:scale-105 duration-300">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Пожертвование</h3>
+                <p class="text-gray-600 mb-4">
+                    Сделайте пожертвование, чтобы помочь участникам СВО и их семьям в трудной ситуации.
+                </p>
+                <a href="{% url 'donation' %}" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg">
+                    Сделать пожертвование
+                </a>
+            </div>
+
+            <!-- Волонтерство -->
+            <div
+                class="bg-white rounded-lg shadow-lg p-6 text-center transition transform hover:scale-105 duration-300">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Гуманитарная помощь</h3>
+                <p class="text-gray-600 mb-4">
+                    Предоставление продовольствия, одежды , медикаментов и дугих необходимых товаров для удовлетворения базовых потребностей постарадвшим гражданам в условиях Специальной Военной Операции
+                </p>
+                <a href="{% url 'initiative' %}"
+                    class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg">
+                    Узнать больше 
+                </a>
+            </div>
+
+            <!-- Консультационная поддержка -->
+            <div
+                class="bg-white rounded-lg shadow-lg p-6 text-center transition transform hover:scale-105 duration-300">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Консультационная поддержка</h3>
+                <p class="text-gray-600 mb-4">
+                    Предоставьте консультационную помощь участникам СВО и их семьям по юридическим и социальным
+                    вопросам.
+                </p>
+                <a href="{% url 'contact' %}"
+                    class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg">
+                    Узнать больше
+                </a>
+            </div>
+        </div>
+
+
+
+        <!-- Социальные сети -->
+        <div class="text-center">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Следите за нами в социальных сетях</h3>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="text-blue-600 hover:text-blue-800">
+                    <i class="fab fa-facebook-f fa-2x"></i>
+                </a>
+                <a href="#" class="text-blue-400 hover:text-blue-600">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="#" class="text-pink-600 hover:text-pink-800">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="#" class="text-red-600 hover:text-red-800">
+                    <i class="fab fa-youtube fa-2x"></i>
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<section id="services" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800">Наши направления работы</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                Благотворительный общественно полезный фонд, оказывающий помощь гражданам в условиях Специальной Военной Операции, занимается предоставлением поддержки и ресурсов для людей, оказавшихся в сложных жизненных обстоятельствах.
+            </p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-8">
+
+            <!-- Гуманитарная помощь -->
+            <div class="bg-gray-50 p-8 rounded-lg shadow-lg max-w-md">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-hand-holding-heart fa-3x text-gray-600"></i> <!-- Иконка гуманитарной помощи -->
+                </div>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Гуманитарная помощь</h3>
+                <p class="text-gray-600 text-center">
+                    Предоставление продовольствия, одежды, медикаментов и других необходимых товаров для удовлетворения базовых потребностей пострадавших граждан, а также помощь мирным жителям Донецкой и Луганской Народных республик.
+                </p>
+            </div>
+
+            <!-- Психологическая поддержка -->
+            <div class="bg-gray-50 p-8 rounded-lg shadow-lg max-w-md">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-comments fa-3x text-gray-600"></i> <!-- Иконка психологической поддержки -->
+                </div>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Психологическая поддержка</h3>
+                <p class="text-gray-600 text-center">
+                    Организация консультаций и сеансов с психологами для помощи людям, испытывающим стресс и тревогу в результате военных действий.
+                </p>
+            </div>
+
+            <!-- Юридическая поддержка -->
+            <div class="bg-gray-50 p-8 rounded-lg shadow-lg max-w-md">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-gavel fa-3x text-gray-600"></i> <!-- Иконка юридической поддержки -->
+                </div>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Юридическая поддержка</h3>
+                <p class="text-gray-600 text-center">
+                    Предоставление консультаций по вопросам правовой защиты и помощи в оформлении необходимых документов.
+                </p>
+            </div>
+
+            <!-- Волонтерская деятельность -->
+            <div class="bg-gray-50 p-8 rounded-lg shadow-lg max-w-md">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-user-friends fa-3x text-gray-600"></i> <!-- Иконка волонтерской деятельности -->
+                </div>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Волонтерская деятельность</h3>
+                <p class="text-gray-600 text-center">
+                    Привлечение волонтеров для участия в инициативах фонда, направленных на поддержку пострадавших граждан, включая помощь детским домам и госпиталям на территории ЛНР и ДНР.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="events-news" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800">Мероприятия и новости</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                Узнайте о предстоящих событиях и посмотрите отчеты о прошедших мероприятиях, организованных нашим
+                фондом.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for event in events %}
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                <img src="{{ event.image.url }}" alt="{{ event.title }}" class="w-full h-48 object-cover rounded-md mb-4">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-2">{{ event.title }}</h3>
+                <p class="text-gray-600 mb-4">
+                    {{ event.description }}
+                </p>
+                <!-- Обновите ссылку на страницу с деталями мероприятия -->
+                <a href="{% url 'event_detail' slug=event.slug %}" class="text-red-600 font-bold hover:text-red-800">Подробнее &rarr;</a>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="mt-12 text-center">
+            <h3 class="text-3xl font-bold text-gray-800 mb-6">Помогите делом</h3>
+            <form action="#" method="POST" class="max-w-xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
+                    <input type="number" name="donation" placeholder="Введите сумму"
+                        class="w-full md:w-1/2 py-3 px-4 rounded-lg bg-gray-200 text-gray-800" required>
+                    
+                    <a href="{% url 'donation' %}" class="w-full md:w-1/2 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg text-center">
+                        Сделать пожертвование
+                    </a>
+                </div>
+                <p class="text-sm text-gray-500 mt-4">Все пожертвования направляются на поддержку участников СВО и
+                    их семей.</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Раздел историй успеха
+<section id="success-stories" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800">Истории успеха</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                Реальные примеры помощи, которую оказал наш фонд. Узнайте, как мы поддерживаем участников СВО и их семьи.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for story in stories %}
+            <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-2">{{ story.title }}</h3>
+                <p class="text-gray-600 mb-4">{{ story.description }}</p>
+                
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section> -->
+
+
+<!-- Контакты-->
+<section id="contact" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+        <!-- Заголовок секции -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800">Контакты</h2>
+            <p class="mt-4 text-lg text-gray-600">
+                Мы всегда готовы помочь и ответить на ваши вопросы.
+            </p>
+        </div>
+
+        <!-- Контактная информация -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold">Наши Контакты</h3>
+
+                <p class="mt-1 text-gray-700">Адрес: г. Чита, Забайкальский край, ул. Фрунзе, д. 10</p>
+
+
+                <p class="mt-1 text-gray-700"><strong>Исполнительный директор:</strong> Рабданова Екатерина
+                    Васильевна
+                </p>
+
+
+                <h4 class="text-lg font-semibold mt-6">Учредители</h4>
+                <p class="mt-2 text-gray-700">Глебова Анна Александровна: <a href="tel:+89963148552"
+                        class="text-blue-500">8-996-314-85-52</a></p>
+                <p class="mt-1 text-gray-700">Винс Анна Сергеевна: <a href="tel:+89963124151"
+                        class="text-blue-500">8-996-312-41-51</a></p>
+
+
+                <h4 class="text-lg font-semibold mt-6">Контактные телефоны</h4>
+                <p class="mt-2 text-gray-700"><a href="tel:+89144406544" class="text-blue-500">8-914-440-65-44</a>
+                </p>
+
+                <h4 class="text-lg font-semibold mt-6">Адрес электронной почты</h4>
+                <p class="mt-2 text-gray-700"><a href="mailto:guran75zk@bk.ru"
+                        class="text-blue-500">guran75zk@bk.ru</a>
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-2xl font-semibold text-gray-800">Свяжитесь с Нами</h3>
+                <form action="#" method="POST" class="mt-4">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700">Имя</label>
+                        <input type="text" id="name" name="name" required
+                            class="mt-1 block w-full border border-gray-300 rounded-lg p-2">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="mt-1 block w-full border border-gray-300 rounded-lg p-2">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-700">Сообщение</label>
+                        <textarea id="message" name="message" rows="4" required
+                            class="mt-1 block w-full border border-gray-300 rounded-lg p-2"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg">
+                        Отправить
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Карта -->
+        <div class="w-full h-64 md:h-96">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3256.5311233212795!2d113.49397921512903!3d52.046668579560154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5dca354355503461%3A0x4c5f6357b73b47e7!2z0JvQvtCz0YDQvtCz0L7QsdC70L7Qt9Cw0LrQvtCx0L7QsdC70L7QvA!5e0!3m2!1sru!2sru!4v1648463287343!5m2!1sru!2sru"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        
+        
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+
+{% endblock %}

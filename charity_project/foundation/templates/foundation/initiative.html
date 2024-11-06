@@ -1,0 +1,277 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Пункты приёма и Координаторы{% endblock %}
+
+{% block content %}
+
+
+<div class="container mx-auto p-6">
+    <h2 class="text-3xl font-bold text-red-600 mb-4">Пункты приёма и Координаторы Отрядов по Районам</h2>
+    <p class="mb-8">
+        Отряд «ГУРАН» организует новую отправку помощи для бойцов, госпиталей, детских домов и нуждающихся жителей
+        ДНР и ЛНР.<br>
+
+    </p>
+    <button onclick="goBack()" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded mb-6">
+        ← Назад
+    </button>
+
+    <!-- Чита -->
+    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h3 class="text-xl font-semibold text-blue-500 mb-2 flex items-center">
+            <span class="mr-2">🏙️</span> Чита
+        </h3>
+        <ul>
+            <li class="mb-4">
+                <p><strong>Центральный склад отряда "Гуран"</strong></p>
+                <p>Чита, ул. Фрунзе, 10, м-н "Продукты"</p>
+                <p>📞 Екатерина: <a href="tel:+79144406544" class="text-blue-500">8 914 440 6544</a></p>
+            </li>
+            <li class="mb-4">
+                <p><strong>Отряд «Твори Добро»</strong></p>
+                <p>📞 Анна: <a href="tel:+89963148552" class="text-blue-500">8 996 314 8552</a>, Анастасия: <a
+                        href="tel:+89243739200" class="text-blue-500">8 924 373 9200</a></p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Смоленка -->
+    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h3 class="text-xl font-semibold text-blue-500 mb-2 flex items-center">
+            <span class="mr-2">🌾</span> Смоленка
+        </h3>
+        <ul>
+            <li class="mb-4">
+                <p><strong>«Ангелы Добра»</strong></p>
+                <p>ул. Балейская, 7</p>
+                <p>📞 Анна: <a href="tel:+89963124151" class="text-blue-500">8 996 312 4151</a></p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Амодово-Сивяково -->
+    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h3 class="text-xl font-semibold text-blue-500 mb-2 flex items-center">
+            <span class="mr-2">🛠️</span> Амодово-Сивяково
+        </h3>
+        <ul>
+            <li class="mb-4">
+                <p><strong>Отряд «Умелые за Своих»</strong></p>
+                <p>ул. Центральная, 4/2</p>
+                <p>📞 Александра: <a href="tel:+89143666212" class="text-blue-500">8 914 366 6212</a></p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ЗАТО п. Горный -->
+    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h3 class="text-xl font-semibold text-blue-500 mb-2 flex items-center">
+            <span class="mr-2">🏢</span> ЗАТО п. Горный
+        </h3>
+        <ul>
+            <li class="mb-4">
+                <p><strong>«ДоброГорный»</strong></p>
+                <p>Здание ЕДДС (магазин "Продмикс")</p>
+                <p>📞 Надежда: <a href="tel:+89144531643" class="text-blue-500">8 914 453 1643</a></p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- г. Краснокаменск, Краснокаменский район -->
+    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h3 class="text-xl font-semibold text-blue-500 mb-2 flex items-center">
+            <span class="mr-2">🏢</span> г. Краснокаменск, Краснокаменский район
+        </h3>
+        <ul>
+            <li class="mb-4">
+                <p><strong>«СВОИХ НЕ БРОСАЕМ»</strong></p>
+                <p>5 мк-н, бывшая техническая библиотека рядом СК "Эталон"</p>
+                <p>📞 Ольга: <a href="tel:+89144338671" class="text-blue-500">8 914 433 8671</a></p>
+                <p>📞 Андрей: <a href="tel:+89165948491" class="text-blue-500">8 916 594 8491</a></p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Борзинский район -->
+    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h3 class="text-xl font-semibold text-blue-500 mb-2 flex items-center">
+            <span class="mr-2">🏢</span> Борзинский район
+        </h3>
+        <ul>
+            <li class="mb-4">
+                <p><strong>Борзя</strong></p>
+                <p>ул. Савватеевская д. 21</p>
+                <p>📞 Карина: <a href="tel:+89144786383" class="text-blue-500">8 914 478 6383</a></p>
+                <p>📞 Яна: <a href="tel:+89244785333" class="text-blue-500">8 924 478 5333</a></p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Акша -->
+    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h3 class="text-xl font-semibold text-blue-500 mb-2 flex items-center">
+            <span class="mr-2">🏢</span> Акша
+        </h3>
+        <ul>
+            <li class="mb-4">
+                <p><strong>«МыVпомощьАкша»</strong></p>
+                <p>Магазин "Мясная лавка" (Ленина 29), Методический кабинет</p>
+                <p>📞 Ирина: <a href="tel:+89145290447" class="text-blue-500">8 914 529 0447</a></p>
+                <p>📞 Лариса: <a href="tel:+89144598019" class="text-blue-500">8 914 459 8019</a></p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Улетовский район -->
+    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h3 class="text-xl font-semibold text-blue-500 mb-2 flex items-center">
+            <span class="mr-2">🏢</span> Улетовский район
+        </h3>
+        <ul>
+            <li class="mb-4">
+                <p><strong>Центральная районная библиотека</strong></p>
+                <p>📞 Марина: <a href="tel:+89144669884" class="text-blue-500">8 914 466 9884</a></p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- пгт. Дровяная -->
+    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h3 class="text-xl font-semibold text-blue-500 mb-2 flex items-center">
+            <span class="mr-2">🏢</span> пгт. Дровяная
+        </h3>
+        <ul>
+            <li class="mb-4">
+                <p><strong>Мы за Победу!</strong></p>
+                <p>ул. Кирова 39А, Здание дома культуры</p>
+                <p>📞 Вероника: <a href="tel:+89144554135" class="text-blue-500">8 914 455 4135</a></p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Хилокский район -->
+    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h3 class="text-xl font-semibold text-blue-500 mb-2 flex items-center">
+            <span class="mr-2">🏢</span> Хилокский район
+        </h3>
+        <ul>
+            <li class="mb-4">
+                <p><strong>Волонтеры Победы</strong></p>
+                <p>г. Хилок, Центральная районная библиотека</p>
+                <p>📞 Ирина: <a href="tel:+89143614478" class="text-blue-500">8 914 361 4478</a></p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- пгт. Могзон -->
+    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h3 class="text-xl font-semibold text-blue-500 mb-2 flex items-center">
+            <span class="mr-2">🏢</span> пгт. Могзон
+        </h3>
+        <ul>
+            <li class="mb-4">
+                <p><strong>«Вместе к Победе»</strong></p>
+                <p>📞 Вячеслав: <a href="tel:+89245125259" class="text-blue-500">8 924 512 5259</a></p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Оловяннинский район -->
+    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h3 class="text-xl font-semibold text-blue-500 mb-2 flex items-center">
+            <span class="mr-2">🏢</span> Оловяннинский район
+        </h3>
+        <ul>
+            <li class="mb-4">
+                <p><strong>«ZаЖизнь»</strong></p>
+                <p>📞 Наталья: <a href="tel:+89144951607" class="text-blue-500">8 914 495 1607</a></p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- МыVпомощьКыра -->
+    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h3 class="text-xl font-semibold text-blue-500 mb-2 flex items-center">
+            <span class="mr-2">🏢</span> МыVпомощьКыра
+        </h3>
+        <ul>
+            <li class="mb-4">
+                <p><strong>Кыринский район</strong></p>
+                <p>с. Тарбальджей</p>
+                <p>📞 Марина Доржиевна: <a href="tel:+89143583134" class="text-blue-500">8 914 358 3134</a></p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Кыряночка -->
+    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h3 class="text-xl font-semibold text-blue-500 mb-2 flex items-center">
+            <span class="mr-2">🏢</span> Кыряночка
+        </h3>
+        <ul>
+            <li class="mb-4">
+                <p><strong>с. Кыра</strong></p>
+                <p>ул. Партизанская 2, м-н "Фортуна плюс"</p>
+                <p>📞 Ольга Михайловна: <a href="tel:+89144930736" class="text-blue-500">8 914 493 0736</a></p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Забайкальский район -->
+    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h3 class="text-xl font-semibold text-blue-500 mb-2 flex items-center">
+            <span class="mr-2">🏢</span> Забайкальский район
+        </h3>
+        <ul>
+            <li class="mb-4">
+                <p><strong>отряд «Крылья»</strong></p>
+                <p>пгт. Забайкальск, ДК «Дом культуры»</p>
+                <p>📞 Анна: <a href="tel:+89145090000" class="text-blue-500">8 914 509 0000</a></p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Петровск - Забайкальский район -->
+    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h3 class="text-xl font-semibold text-blue-500 mb-2 flex items-center">
+            <span class="mr-2">🏢</span> Петровск - Забайкальский район
+        </h3>
+        <ul>
+            <li class="mb-4">
+                <p><strong>«Мы вместе»</strong></p>
+                <p>с. Петровск</p>
+                <p>📞 Маша: <a href="tel:+89149381023" class="text-blue-500">8 914 938 1023</a></p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Шелопугинский район -->
+    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h3 class="text-xl font-semibold text-blue-500 mb-2 flex items-center">
+            <span class="mr-2">🏢</span> Шелопугинский район
+        </h3>
+        <ul>
+            <li class="mb-4">
+                <p><strong>Волонтерская группа «Поток»</strong></p>
+                <p> с. Шелопугино</p>
+                <p>📞 Елена: <a href="tel:+89144501215" class="text-blue-500">8 914 450 1215</a></p>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <div class="text-center text-sm text-gray-600 mt-10">
+        *Инициативные группы в вашем районе помогают координировать сбор и отправку помощи нуждающимся. Для деталей
+        и уточнений обращайтесь по указанным контактам.*
+    </div>
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+{% endblock %}
