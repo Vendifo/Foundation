@@ -86,6 +86,9 @@ DATABASES = {
     }
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://foundation-app.onrender.com',
+]
 
 
 
