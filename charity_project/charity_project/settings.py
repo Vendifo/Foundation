@@ -77,10 +77,16 @@ WSGI_APPLICATION = 'charity_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'foundation_db',  # Название базы данных
+        'USER': 'foundation_user',  # Имя пользователя
+        'PASSWORD': 'dJAmuq6iodOwqae8p5spwg3A8hIYb2Uq',  # Пароль
+        'HOST': 'dpg-csm92n8gph6c73aep4e0-a',  # Хост
+        'PORT': '5432',  # Порт по умолчанию для PostgreSQL
     }
 }
+
+
 
 
 # Password validation
