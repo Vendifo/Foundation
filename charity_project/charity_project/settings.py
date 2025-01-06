@@ -78,13 +78,14 @@ WSGI_APPLICATION = 'charity_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'foundation_db',  # Название базы данных
-        'USER': 'foundation_user',  # Имя пользователя
-        'PASSWORD': 'dJAmuq6iodOwqae8p5spwg3A8hIYb2Uq',  # Пароль
-        'HOST': 'dpg-csm92n8gph6c73aep4e0-a',  # Хост
+        'NAME': 'foundationdb_uh18',  # Название базы данных
+        'USER': 'foundationdb_uh18_user',  # Имя пользователя
+        'PASSWORD': '6EIKB8916L8BxyiVd6fO7xZc15WOgncJ',  # Пароль
+        'HOST': 'dpg-cttrv23qf0us73eu69r0-a',  # Внутренний хост
         'PORT': '5432',  # Порт по умолчанию для PostgreSQL
     }
 }
+
 
 CSRF_TRUSTED_ORIGINS = [
     'https://foundation-app.onrender.com',
